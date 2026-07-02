@@ -10,8 +10,8 @@ export default [
       ecmaVersion: 'latest',
       sourceType: 'module',
       globals: {
-        ...globals.node
-      }
+        ...globals.node,
+      },
     },
 
     rules: {
@@ -20,22 +20,16 @@ export default [
         'error',
         {
           argsIgnorePattern: '^_',
-          varsIgnorePattern: '^_'
-        }
+          varsIgnorePattern: '^_',
+        },
       ],
       'prefer-const': 'error',
       eqeqeq: ['error', 'always'],
-      curly: ['error', 'all']
-    }
+      curly: ['error', 'all'],
+    },
   },
 
   {
-    ignores: [
-      'node_modules/',
-      'coverage/',
-      'logs/',
-      'dist/',
-      'build/'
-    ]
-  }
+    ignores: ['node_modules/', 'coverage/', 'logs/', 'dist/', 'build/'],
+  },
 ];
