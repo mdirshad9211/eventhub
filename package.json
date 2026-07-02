@@ -1,0 +1,38 @@
+{
+  "name": "eventhub",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "dev": "nodemon src/server.js",
+    "start": "node src/server.js",
+    "test": "jest",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mdirshad9211/eventhub.git"
+  },
+  "keywords":[
+    "backend",
+    "fastify",
+    "analytics",
+    "events",
+    "nodejs",
+    "microservices"
+  ],
+  "author": "Md Irshad",
+  "license": "MIT",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/mdirshad9211/eventhub/issues"
+  },
+  "homepage": "https://github.com/mdirshad9211/eventhub#readme",
+   "engines": {
+    "node": ">=24.0.0"
+  }
+}
