@@ -17,7 +17,7 @@
     "type": "git",
     "url": "git+https://github.com/mdirshad9211/eventhub.git"
   },
-  "keywords":[
+  "keywords": [
     "backend",
     "fastify",
     "analytics",
@@ -32,7 +32,29 @@
     "url": "https://github.com/mdirshad9211/eventhub/issues"
   },
   "homepage": "https://github.com/mdirshad9211/eventhub#readme",
-   "engines": {
+  "engines": {
     "node": ">=24.0.0"
+  },
+  "dependencies": {
+    "@fastify/cors": "^11.2.0",
+    "@fastify/helmet": "^13.0.2",
+    "@fastify/swagger": "^9.7.0",
+    "@fastify/swagger-ui": "^6.0.0",
+    "@prisma/client": "^7.8.0",
+    "dotenv": "^17.4.2",
+    "fastify": "^5.9.0",
+    "uuid": "^14.0.1",
+    "winston": "^3.19.0",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "eslint": "^10.6.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.6",
+    "jest": "^30.4.2",
+    "nodemon": "^3.1.14",
+    "prettier": "^3.9.4",
+    "prisma": "^7.8.0",
+    "supertest": "^7.2.2"
   }
 }
