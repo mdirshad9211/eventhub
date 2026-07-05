@@ -1,4 +1,5 @@
 import Fastify from 'fastify';
+import healthModule from './modules/health/index.js';
 
 import { logger } from './common/logger/index.js';
 
@@ -8,13 +9,7 @@ function buildApp() {
     disableRequestLogging: true,
   });
 
-  app.get('/', async () => {
-    return {
-      service: 'EventHub',
-      version: '1.0.0',
-      status: 'running',
-    };
-  });
+  app.register(healthModule);
 
   app.setErrorHandler((error, request, reply) => {
     logger.error(error);
