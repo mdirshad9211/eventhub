@@ -1,13 +1,11 @@
 import healthService from '../service/health.service.js';
+import { Response } from '../../../common/response/index.js';
 
 class HealthController {
   async getHealth(request, reply) {
     const health = healthService.getHealthStatus();
 
-    return reply.status(200).send({
-      success: true,
-      data: health,
-    });
+    return Response.success(reply, health);
   }
 }
 
