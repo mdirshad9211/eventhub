@@ -1,7 +1,6 @@
 import Fastify from 'fastify';
 import healthModule from './modules/health/index.js';
-
-import { logger } from './common/logger/index.js';
+import { errorHandler } from './common/errors/index.js';
 
 function buildApp() {
   const app = Fastify({
@@ -11,14 +10,7 @@ function buildApp() {
 
   app.register(healthModule);
 
-  app.setErrorHandler((error, request, reply) => {
-    logger.error(error);
-
-    return reply.status(500).send({
-      success: false,
-      message: 'Internal Server Error',
-    });
-  });
+  app.setErrorHandler(errorHandler);
 
   return app;
 }
